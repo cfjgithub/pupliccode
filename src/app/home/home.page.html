@@ -1,0 +1,35 @@
+
+
+
+<ion-tabs class="tabs-icon-top tabs-top tabs-color-active-positive" 
+   #homeTabs>  
+  <ion-tab-bar slot="bottom" >  
+
+    <ion-tab-button tab="about">  
+      <ion-icon  class="icon-sy"  name="" ></ion-icon>  
+      <ion-label>首页</ion-label>  
+    </ion-tab-button  >  
+
+    <ion-tab-button tab="my">   
+      <ion-icon class="icon-yd" ></ion-icon>  
+      <ion-label>阅读</ion-label>  
+    </ion-tab-button>   
+
+    <ion-tab-button (click)="openModal($event)" >   
+      <ion-icon  class="icon-fx" ></ion-icon>  
+      <ion-label>分享</ion-label>  
+    </ion-tab-button>   
+    <!--
+    <ion-tab-button >   
+      <ion-icon class="icon-xx" ></ion-icon>  
+      <ion-label>消息</ion-label>  
+    </ion-tab-button>   
+    -->
+  <ion-tab-button tab="me" >   
+    <ion-icon  class="icon-wd" ></ion-icon>  
+    <ion-label>我的</ion-label>  
+  </ion-tab-button>          
+</ion-tab-bar>  
+</ion-tabs>  
+
+

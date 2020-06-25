@@ -1,0 +1,251 @@
+<ion-header  no-border fullscreen>
+  <ion-toolbar  color="primary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+   <ion-item color="primary" lines="none">
+    <ion-title  class="ion-text-center" > 
+       我的 
+    </ion-title>
+    <ion-icon class="sz" ></ion-icon>  
+  </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item-group #loginggroup  [ngStyle]="{'display': islogin===true ? 'block' : 'none'}" color="primary" >
+    <ion-item-sliding  color="primary">
+  
+      <ion-item  color="primary">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/fonts/我的.svg">
+        </ion-thumbnail>
+    
+        <ion-label  >
+          <label>末日孤舰*舰长</label>
+          <br>
+          <label>完善个人资料,让更多的人认识你</label>
+        </ion-label>
+        <ion-icon class="jt_white"></ion-icon>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-grid >
+          <ion-row justify-content-around>
+            <ion-col>
+              <ion-label 
+              style=" text-align: center;">
+                <label>分享</label>
+                <br>
+                <label>200</label>
+              </ion-label>
+            </ion-col>
+            <ion-col >
+              <ion-label 
+              style=" text-align: center;">
+                <label>关注</label>
+                <br>
+                <label>800</label>
+              </ion-label>
+            </ion-col>
+            <ion-col >
+              <ion-label 
+              style=" text-align: center;">
+                <label>粉丝</label>
+                <br>
+                <label>1200</label>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-item-group>
+
+<ion-item-group>
+  <ion-item-divider  color="light">
+    <ion-label>
+  
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item  [ngStyle]="{'display': islogin===false ? 'block' : 'none'}"
+    (click)="openModal($event)"
+    >
+
+      <ion-icon class="denglu" ></ion-icon>
+      <ion-label>登陆</ion-label> 
+        <ion-icon class="jt_y"></ion-icon>
+
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+
+<ion-item-group>
+  <ion-item-sliding>
+
+    <ion-item>
+      <ion-icon class="zygh" ></ion-icon>   
+      <ion-label>职业规划</ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+<ion-item-group [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">
+  <ion-item-divider color="light">
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item >
+      <ion-icon class="jh"></ion-icon >
+      <ion-label  >申请新的独家号</ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+  <ion-item-sliding>
+    <ion-item >
+      <ion-thumbnail slot="start">
+        <img src="../../assets/fonts/独家.svg"/>
+
+  </ion-thumbnail>
+        <ion-label>
+        <label>末日孤舰*舰长</label>
+        <label style="color: red;">(换个名字吧)</label>
+        <ion-label  slot="start"
+        style="font-size: small; text-align:left;">
+          <ion-note>1 分享 </ion-note>
+          <ion-note>100 订阅者</ion-note>
+        </ion-label>
+      </ion-label>
+      <div>
+        <img src="../../assets/fonts/晒图.svg"/>
+        <div>
+          <ion-note  >晒一晒</ion-note> 
+        </div>
+      </div>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+
+
+
+<ion-item-group [ngStyle]="{'display': islogin===false ? 'block' : 'none'}">
+  <ion-item-divider color="light">
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item >
+      <ion-icon class="jh"></ion-icon >
+      <ion-label  color="danger" ><h2>申请我的独家号</h2></ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+
+<ion-item-group>
+  <ion-item-divider color="light">
+    <ion-label>
+  
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-icon class="dyh"></ion-icon >
+      <ion-label>我点阅的独家号</ion-label> 
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">63</ion-text>
+      <ion-icon class="jt_y">
+
+      </ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+<ion-item-group>
+  <ion-item-divider color="light">
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-icon class="qb"></ion-icon >
+      <ion-label>我的Q币</ion-label>
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">100</ion-text>
+         <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="sy"></ion-icon >
+      <ion-label>昨日收益</ion-label> 
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">90</ion-text>
+      <ion-icon class="jt_y"></ion-icon>  
+
+    </ion-item>
+    <ion-item>
+      <ion-icon class="lwdh"></ion-icon >
+      <ion-label>礼物兑换</ion-label> 
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">IO币免费兑换好礼</ion-text>
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+
+  </ion-item-sliding>
+</ion-item-group>
+
+<ion-item-group>
+  <ion-item-divider color="light">
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-icon class="sc"></ion-icon>
+      <ion-label>我的收藏</ion-label> 
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">90</ion-text>
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="ll"></ion-icon >
+
+      <ion-label>最近浏览</ion-label> 
+      <ion-text [ngStyle]="{'display': islogin===true ? 'block' : 'none'}">120</ion-text>
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+<ion-item-group>
+  <ion-item-divider color="light">
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-icon class="fk"></ion-icon >
+      <ion-label>意见反馈</ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon class="hz"></ion-icon >
+      <ion-label>合作申请</ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+  </ion-item-sliding>
+</ion-item-group>
+
+<ion-item-group>
+  <ion-item-divider  color="light"> 
+    <ion-label>
+    </ion-label>
+  </ion-item-divider>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-icon class="fx"></ion-icon >
+      <ion-label>推荐【开发者生态】给好友</ion-label> 
+      <ion-icon class="jt_y"></ion-icon>
+    </ion-item>
+    
+  </ion-item-sliding>
+</ion-item-group>
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header no-border >
+  <ion-toolbar  color="primary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" >
+      推荐  
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card  >
+
+    <ion-slides   #mySlider pager=true  scrollbar=false  >
+     <ion-slide  *ngFor="let title of titles"    >
+     
+        <div class="container">
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-label style="font-size: x-small;text-align: center; "
+              >
+               作者：张三
+            </ion-label>
+            <ion-label style="font-size: x-small;text-align: center; 
+            margin-left: 2%;"
+            >
+              发布时间：2020-01-31 
+          </ion-label>
+            </ion-card-subtitle>
+          </ion-card-header>
+           
+          <ion-item lines="none" >
+          <ion-img src="{{title.imgUrl}}" alt="loading" style="margin-bottom: 10px;"></ion-img>
+          </ion-item>
+          <ion-item >
+            <ion-label style="font-size: small;text-align: center; ">
+              {{title.title}}
+          </ion-label>
+        </ion-item>
+       
+      </div>
+    
+      </ion-slide>
+      
+    </ion-slides>
+
+      
+    <ion-card-header>
+
+      <ion-card-title>软件研发生产率生态</ion-card-title>
+
+    
+    </ion-card-header>
+    <ion-card-content>
+    
+      <p>
+        关注从业务方再到业务方的全生命周期的软件研发管理过程中的技术架构，自动化运维，研发效能，方法论的分享。技术栈： Java&大数据&IoT&AI&区块链&分布式；敏捷开发& DevOps，持续集成与持续交付相关技术和行业解决方案。
+        <ion-item href=" http://fg.sjdsgw.com">
+          <ion-icon slot="start" color="medium" name="book"></ion-icon>
+          <ion-label>网站地址</ion-label>
+        </ion-item>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

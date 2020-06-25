@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-icon style="float:left;width:50px;height:30px;color:rgb(red, green, blue)" name="ios-arrow-back" (click)='canGoBack()'></ion-icon>
+    <ion-title class="ion-text-center">
+      {{data}}
+    </ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+   <ion-content class="padding" scroll=true  fullscreen=true > 
+  
+     <div style="padding: 1%;" [innerHtml]=content ></div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs >  
+    <ion-tab-bar slot="bottom" >  
+  
+      <ion-tab-button tab="about">  
+        <ion-icon  class="icon-sc"  name="" ></ion-icon>  
+        <ion-label>收藏</ion-label>  
+      </ion-tab-button  >  
+  
+      <ion-tab-button tab="my">   
+        <ion-icon class="icon-fx" ></ion-icon>  
+        <ion-label>分享</ion-label>  
+      </ion-tab-button>   
+  
+      <ion-tab-button  >   
+        <ion-icon  class="icon-dz" ></ion-icon>  
+        <ion-label>点赞</ion-label>  
+      </ion-tab-button>   
+  
+  </ion-tab-bar>  
+  
+  </ion-tabs>  
+</ion-toolbar>
+
+</ion-footer>

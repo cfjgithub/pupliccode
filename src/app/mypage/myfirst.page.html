@@ -1,0 +1,95 @@
+
+<ion-header no-border >
+  <ion-toolbar  color="primary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-segment   style="font-size: 15px;"
+    [(ngModel)]="segment" mode="md"
+    (ionChange)="segmentChanged($event)" scrollable=true  #cateorySegment  
+    >
+     
+    <ion-segment-button
+    mode="md"
+    *ngFor="let category of categories;let i = index"   
+       (click)="doOnClick(category.key)" 
+       [value]="i" 
+  
+       >
+        {{category.name}}
+      </ion-segment-button
+      >
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+  
+  <!--
+
+ <ion-tabs  selectedIndex="0"  #cateoryTabs >  
+    
+    <ion-tab-bar slot="top" >  
+      <ion-tab-button  
+      *ngFor="let category of categories"
+      (click)="doOnClick(category.key,$event.target)" >  
+        <ion-label >{{category.name}}</ion-label>  
+      </ion-tab-button
+      >  
+    </ion-tab-bar>  
+  </ion-tabs>  
+  -->
+ 
+<ion-content (swipe)="swipeEvnet($event)">
+<div [ngSwitch]="segment">
+  <ion-card   *ngFor="let title of titles" (click)="goDetail(title)">  
+    <ion-card-header>  
+      <ion-grid>
+        <ion-row>
+
+          <ion-col  size-lg="3" size-md="4" size-sm="6" size="12" >
+            <ion-card-subtitle>
+              <ion-text color="primary" >
+             发布时间：5天前
+              </ion-text>
+              <ion-text color="primary" >
+                作者：张三
+                 </ion-text>
+            </ion-card-subtitle>
+            <img src="../../assets/shapes.svg" />
+          </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col class="ion-no-padding">
+          <ion-card-title   color="primary" style="font-size: medium;">{{title}}</ion-card-title>  
+
+          <ion-card-subtitle>
+            <ion-text color="primary">
+             收藏:333
+            </ion-text>
+            <ion-text color="primary">
+               评论：55
+             </ion-text>
+             <ion-text color="primary">
+              点赞：55
+            </ion-text>
+          </ion-card-subtitle>
+        </ion-col>
+        </ion-row>
+     
+        
+      </ion-grid>
+     
+    
+    
+    </ion-card-header> </ion-card>  
+</div>
+  </ion-content>
+  <style>
+    ion-segment {
+      padding: 5px;
+    }
+  </style>

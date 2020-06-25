@@ -1,0 +1,69 @@
+
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title class="ion-text-center" >手机登录/注册</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-item>
+    <ion-label>手机号</ion-label>
+    <ion-input placeholder="请输入手机号"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>验证码</ion-label>
+    <ion-input placeholder="请输入验证码"></ion-input>
+    <ion-button expand="full" shape="round" > <ion-icon  class="yzm" ></ion-icon>获取验证码</ion-button>
+  </ion-item>
+  <ion-item   >
+  
+    <ion-button expand="full" shape="round"   style="width: 100%;"   color="primary" (click)="update()">
+      <ion-icon  class="dl_white" ></ion-icon>
+      <ion-label >登录/注册  </ion-label> 
+  </ion-button>
+  <ion-button expand="full" shape="round"  style="width: 100%;" [routerLink]="[ '/me']" color="primary" >
+    <ion-icon  class="qx_white" ></ion-icon> 
+    <ion-label > 取  消</ion-label> 
+  </ion-button>
+
+  </ion-item>
+
+   <ion-item lines="none" >
+     <ion-text slot="end"  style="font-size:xx-small; color:red;" size="small">
+        无法验证？向客服反馈
+     </ion-text>
+   </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!--
+    <ion-item  lines="none" style="margin-bottom: 10%;">
+      <ion-label color="primary">
+        其他方式登录
+      </ion-label>
+    </ion-item>
+    <ion-item  lines="full" style="margin-bottom: 10%; align-self: auto;" >
+  
+        <img src="../../assets/fonts/微信.svg" style="margin-bottom: 5%;" >
+        <img src="../../assets/fonts/github.svg" style="margin-left:6%;margin-bottom: 5%;"> 
+        <img src="../../assets/fonts/支付宝.svg" style="margin-left:6%;margin-bottom: 5%;"  >
+  
+  
+    </ion-item >
+    -->
+
+</ion-toolbar>
+
+</ion-footer>
+
+ 
